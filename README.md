@@ -34,8 +34,8 @@ This program scrapes property listings from **Spitogatos** and **XE**, stores th
 ### 2. Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/property-scraper.git
-cd property-scraper
+git clone https://github.com/WinRout/HomeWeb.git
+cd HomeWeb
 ```
 
 ### 3. Install Dependencies
