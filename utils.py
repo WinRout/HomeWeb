@@ -19,7 +19,7 @@ def print_results(spitogatos_results: Dict, xe_results: Dict) -> None:
             return [row[0] for row in cursor.fetchall()]
 
     # Prepare the output content
-    output_content = f"Last executed on: {last_execution_time}\n\n"
+    output_content = f"\n\nLast executed on: {last_execution_time}\n\n"
 
     # Process Spitogatos results
     if spitogatos_results["new_ids"]:
@@ -33,7 +33,7 @@ def print_results(spitogatos_results: Dict, xe_results: Dict) -> None:
     # if not spitogatos_results["new_ids"] and not spitogatos_results["modified_ids"]:
     #     output_content += "No new or modified properties found on Spitogatos.\n\n"
     else:
-        output_content += "No new properties found on spitogatos."
+        output_content += "No new properties found on spitogatos.\n\n"
 
     # Process XE results
     if xe_results["new_ids"]:
@@ -47,7 +47,7 @@ def print_results(spitogatos_results: Dict, xe_results: Dict) -> None:
     # if not xe_results["new_ids"] and not xe_results["modified_ids"]:
     #     output_content += "No new or modified properties found on XE.\n\n"
     else:
-        output_content += "No new properties found on XE."
+        output_content += "No new properties found on XE.\n\n"
 
     # Print to console
     print(output_content)
