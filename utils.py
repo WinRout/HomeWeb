@@ -8,7 +8,6 @@ def print_results(spitogatos_results: Dict, xe_results: Dict) -> None:
     Results are consolidated into a single output file.
     """
     last_execution_time = get_last_execution_time()
-    print(f"Last executed on: {last_execution_time}\n")
 
     def get_urls_from_db(ids: List[str], table_name: str) -> List[str]:
         """Fetch URLs from the database for the given IDs."""
