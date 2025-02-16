@@ -27,12 +27,14 @@ def print_results(spitogatos_results: Dict, xe_results: Dict) -> None:
         output_content += "New properties found on Spitogatos:\n"
         urls = get_urls_from_db(spitogatos_results["new_ids"], "spitogatos")
         output_content += "\n".join(urls) + "\n\n"
-    if spitogatos_results["modified_ids"]:
-        output_content += "Modified properties on Spitogatos:\n"
-        urls = get_urls_from_db(spitogatos_results["modified_ids"], "spitogatos")
-        output_content += "\n".join(urls) + "\n\n"
-    if not spitogatos_results["new_ids"] and not spitogatos_results["modified_ids"]:
-        output_content += "No new or modified properties found on Spitogatos.\n\n"
+    # if spitogatos_results["modified_ids"]:
+    #     output_content += "Modified properties on Spitogatos:\n"
+    #     urls = get_urls_from_db(spitogatos_results["modified_ids"], "spitogatos")
+    #     output_content += "\n".join(urls) + "\n\n"
+    # if not spitogatos_results["new_ids"] and not spitogatos_results["modified_ids"]:
+    #     output_content += "No new or modified properties found on Spitogatos.\n\n"
+    else:
+        output_content += "No new properties found on spitogatos."
 
     # Process XE results
     if xe_results["new_ids"]:
