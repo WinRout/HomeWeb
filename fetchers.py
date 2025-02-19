@@ -19,7 +19,7 @@ def fetch_data(url: str, params: dict = None, parser: callable = None) -> List[D
         response.raise_for_status()
         return parser(response) if parser else []
     except Exception as e:
-        print(f"Error fetching or parsing data from {url}: {e}")
+        print(f"Error fetching or parsing data from {url}")
         return []
 
 def parse_spitogatos(response: requests.Response) -> List[Dict]:
